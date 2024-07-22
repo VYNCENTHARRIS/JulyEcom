@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"; // Import necessary hooks from React
-import { useParams } from "react-router-dom"; // Import useParams hook from react-router-dom to get route parameters
+import React, { useState, useEffect } from "react"; // Import hooks from React
+import { useParams } from "react-router-dom";
 import {
   Accordion,
   AccordionItem,
@@ -46,7 +46,7 @@ const ProductDetail = () => {
       });
   };
 
-  // Display a loading message while the product details are being fetched
+  // Display a loading message if it takes while to get the product details
   if (!product) {
     return <div>Loading...</div>;
   }

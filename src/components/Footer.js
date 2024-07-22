@@ -33,7 +33,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-3">
-            <h5>Join M&N News</h5>
+            <h5>Join Ecomm News</h5>
             <p>Subscribe to our list and get 10% off your next order</p>
             <input
               type="email"
@@ -74,7 +74,7 @@ const Footer = () => {
               <FaGithub />
             </a>
           </div>
-          <p>&copy; 2024 Mitchell & Ness Nostalgia Co. All rights reserved.</p>
+          <p>&copy; 2024 Redeisned Ecommerce. All rights reserved.</p>
           <p>Terms of Use | Privacy Policy | Supply Chain</p>
         </div>
       </div>

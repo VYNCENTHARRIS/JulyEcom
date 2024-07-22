@@ -1,10 +1,10 @@
-// Import necessary modules
+// Import modules
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 const path = require("path");
-const bcrypt = require("bcrypt"); // For password hashing
+const bcrypt = require("bcrypt"); // Will encrypt the password
 
 const app = express();
 const port = 5000;
@@ -12,7 +12,7 @@ const port = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Serve static files from the public directory located one level up
+// Serve static files from the public directory
 app.use("/public", express.static(path.join(__dirname, "../public")));
 
 // Create a connection to the database
@@ -96,7 +96,7 @@ app.post("/login", (req, res) => {
 // Add to cart
 app.post("/cart", (req, res) => {
   const { productId } = req.body;
-  const userId = 1; // Temporary static userId for testing
+  const userId = 1; // Mock one
   const sql = "INSERT INTO cart (user_id, product_id) VALUES (?, ?)";
   db.query(sql, [userId, productId], (err, result) => {
     if (err) throw err;

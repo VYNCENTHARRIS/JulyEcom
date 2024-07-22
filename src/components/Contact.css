@@ -1,8 +1,8 @@
 .contact-container {
-  background-color: #f8f9fa; /* Light gray background for the form container */
+  background-color: #f8f9fa; 
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   max-width: 600px;
   margin: 2rem auto;
 }
@@ -13,18 +13,18 @@
 }
 
 h1 {
-  font-size: 2.5rem; /* Larger font size for the heading */
+  font-size: 2.5rem; 
   margin-bottom: 1rem;
-  color: #333; /* Darker color for the heading */
+  color: #333; 
 }
 
 .form-label {
   font-weight: bold;
-  color: #555; /* Slightly lighter color for the labels */
+  color: #555; 
 }
 
 .form-control {
-  border-radius: 5px; /* Rounded corners for input fields */
+  border-radius: 5px; /* Rounded corners */
   padding: 0.75rem;
   border: 1px solid #ccc;
 }

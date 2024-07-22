@@ -8,7 +8,7 @@ const Products = ({ updateCartCount }) => {
   const [filterPriceRange, setFilterPriceRange] = useState(""); // State to store the selected price range filter
   const [filterTeam, setFilterTeam] = useState(""); // State to store the selected team filter
   const [filterSport, setFilterSport] = useState(""); // State to store the selected sport filter
-  const [message, setMessage] = useState(""); // State to store messages (e.g., success or error messages)
+  const [message, setMessage] = useState(""); // State to store messages if need like succesful or an error message
 
   // useEffect to fetch products from the server when the component mounts
   useEffect(() => {
@@ -100,7 +100,7 @@ const Products = ({ updateCartCount }) => {
     <div>
       <h1>Products</h1>
       {message && <div className="alert alert-info">{message}</div>}{" "}
-      {/* Display messages if any */}
+      {/* May include text not sure */}
       <div className="row mb-4">
         <div className="col-md-3">
           {/* Filter by Type */}

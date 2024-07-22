@@ -1,5 +1,3 @@
-/* Home.css */
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -114,22 +112,28 @@ h1 {
 /* Media Queries for responsiveness */
 @media (max-width: 1200px) {
   .custom-carousel-item {
+    /* Set the width of custom carousel items to half of the container width minus 1rem */
     width: calc(100% / 2 - 1rem);
   }
 }
 
+/* For screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .custom-carousel-item {
+    /* Set the width of custom carousel items to the full container width minus 1rem */
     width: calc(100% - 1rem);
   }
 }
 
+/* For screens with a maximum width of 576px */
 @media (max-width: 576px) {
   .container {
+    /* Reduce the padding inside the container to 10px */
     padding: 10px;
   }
 
   .hero-carousel img {
+    /* Set the height of carousel images to 30% */
     height: 30vh;
   }
 

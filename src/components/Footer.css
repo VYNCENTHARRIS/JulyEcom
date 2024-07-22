@@ -9,16 +9,16 @@
 
 /* Footer headings */
 footer h5 {
-  font-size: 1.5rem; /* Increase the font size */
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #ffffff; /* Ensure white color for headings */
+  color: #ffffff;
 }
 
 /* Footer paragraphs and lists */
 footer p,
 footer ul {
-  font-size: 1rem; /* Increase font size */
-  color: #cccccc; /* Light gray color for text */
+  font-size: 1rem;
+  color: #cccccc; /* Light gray */
 }
 
 /* Footer list styles */
@@ -34,20 +34,20 @@ footer ul li {
 /* Footer input styles */
 footer input {
   margin-bottom: 1rem;
-  background-color: #444; /* Darker background for input */
-  color: #fff; /* White text color */
+  background-color: #444;
+  color: #fff;
   border: none;
-  padding: 0.5rem; /* Add padding */
+  padding: 0.5rem;
 }
 
 footer input::placeholder {
-  color: #ccc; /* Light gray placeholder text */
+  color: #ccc;
 }
 
 /* Social icons container */
 .social-icons {
   display: flex;
-  gap: 1rem; /* Space out the icons */
+  gap: 1rem; /* Space between the icons */
   justify-content: center; /* Center the icons */
   margin-bottom: 1rem; /* Add space below icons */
 }
@@ -55,8 +55,8 @@ footer input::placeholder {
 /* Social icons */
 .social-icons a {
   color: #ffffff; /* White color for the icons */
-  font-size: 1.5rem; /* Increase the size of the icons */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -69,5 +69,5 @@ footer p {
 }
 
 footer p:last-child {
-  margin-bottom: 0; /* Remove bottom margin from last paragraph */
+  margin-bottom: 0; /* Unpleasent margin from last paragraph */
 }
