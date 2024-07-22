@@ -16,11 +16,14 @@ app.use(bodyParser.json());
 app.use("/public", express.static(path.join(__dirname, "../public")));
 
 // Create a connection to the database
+require("dotenv").config();
+
 const db = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "password",
-  database: "redesigned_ecommerce",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
 });
 
 // Connect to the database
