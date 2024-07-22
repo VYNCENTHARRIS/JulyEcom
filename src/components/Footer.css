@@ -1,0 +1,73 @@
+/* Footer container */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Footer headings */
+footer h5 {
+  font-size: 1.5rem; /* Increase the font size */
+  margin-bottom: 1rem;
+  color: #ffffff; /* Ensure white color for headings */
+}
+
+/* Footer paragraphs and lists */
+footer p,
+footer ul {
+  font-size: 1rem; /* Increase font size */
+  color: #cccccc; /* Light gray color for text */
+}
+
+/* Footer list styles */
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer input styles */
+footer input {
+  margin-bottom: 1rem;
+  background-color: #444; /* Darker background for input */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 0.5rem; /* Add padding */
+}
+
+footer input::placeholder {
+  color: #ccc; /* Light gray placeholder text */
+}
+
+/* Social icons container */
+.social-icons {
+  display: flex;
+  gap: 1rem; /* Space out the icons */
+  justify-content: center; /* Center the icons */
+  margin-bottom: 1rem; /* Add space below icons */
+}
+
+/* Social icons */
+.social-icons a {
+  color: #ffffff; /* White color for the icons */
+  font-size: 1.5rem; /* Increase the size of the icons */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Footer bottom text */
+footer p {
+  margin: 0.5rem 0; /* Add space around text */
+}
+
+footer p:last-child {
+  margin-bottom: 0; /* Remove bottom margin from last paragraph */
+}
