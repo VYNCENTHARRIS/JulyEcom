@@ -1,17 +1,24 @@
-// Import modules
-require("dotenv").config();
+require("dotenv").config({ path: __dirname + "/.env" });
+
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 const path = require("path");
-const bcrypt = require("bcrypt"); // Will encrypt the password
+const bcrypt = require("bcrypt");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// Log environment variables to ensure they are loaded
+console.log("DB_HOST:", process.env.DB_HOST);
+console.log("DB_USER:", process.env.DB_USER);
+console.log("DB_PASS:", process.env.DB_PASS);
+console.log("DB_NAME:", process.env.DB_NAME);
+console.log("DB_PORT:", process.env.DB_PORT);
 
 // Serve static files from the public directory
 app.use("/public", express.static(path.join(__dirname, "../public")));
@@ -28,6 +35,7 @@ const db = mysql.createConnection({
 // Connect to the database
 db.connect((err) => {
   if (err) {
+    console.error("Error connecting to database:", err);
     throw err;
   }
   console.log("Connected to database");
@@ -195,6 +203,12 @@ app.post("/contact", (req, res) => {
     }
     res.json({ success: true, message: "Contact form submitted successfully" });
   });
+});
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 app.listen(port, () => {
