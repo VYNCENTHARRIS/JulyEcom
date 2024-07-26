@@ -16,16 +16,28 @@ const Products = ({ updateCartCount }) => {
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
-  const handleTypeFilterChange = (e) => setFilterType(e.target.value);
-  const handlePriceRangeFilterChange = (e) =>
+  const handleTypeFilterChange = (e) => {
+    setFilterType(e.target.value);
+  };
+
+  const handlePriceRangeFilterChange = (e) => {
     setFilterPriceRange(e.target.value);
-  const handleTeamFilterChange = (e) => setFilterTeam(e.target.value);
-  const handleSportFilterChange = (e) => setFilterSport(e.target.value);
+  };
+
+  const handleTeamFilterChange = (e) => {
+    setFilterTeam(e.target.value);
+  };
+
+  const handleSportFilterChange = (e) => {
+    setFilterSport(e.target.value);
+  };
 
   const addToCart = (productId) => {
     fetch("https://julyecom.onrender.com/cart", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ productId }),
     })
       .then((response) => response.json())
@@ -34,7 +46,9 @@ const Products = ({ updateCartCount }) => {
           setMessage("Product added to cart");
           fetch("https://julyecom.onrender.com/cart")
             .then((response) => response.json())
-            .then((data) => updateCartCount(data.length))
+            .then((data) => {
+              updateCartCount(data.length);
+            })
             .catch((error) =>
               console.error("Error fetching cart items:", error)
             );
