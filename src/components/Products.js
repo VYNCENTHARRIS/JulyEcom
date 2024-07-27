@@ -172,7 +172,7 @@ const Products = ({ updateCartCount }) => {
                 <div className="card h-100">
                   <Link to={`/product/${product.id}`}>
                     <img
-                      src={`/images/${product.image_url}`}
+                      src={`https://julyecom.onrender.com/build/images/${product.image_url}`}
                       className="card-img-top"
                       alt={product.name}
                     />

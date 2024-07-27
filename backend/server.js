@@ -1,10 +1,10 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+const path = require("path"); // Import the path module
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
-const path = require("path");
 const bcrypt = require("bcrypt");
 
 const app = express();
@@ -20,8 +20,10 @@ console.log("DB_PASS:", process.env.DB_PASS);
 console.log("DB_NAME:", process.env.DB_NAME);
 console.log("DB_PORT:", process.env.DB_PORT);
 
-// Serve static files from the build directory at the root level
+// Serve static files from the build directory
 app.use(express.static(path.join(__dirname, "../build")));
+// Serve static files from the public directory
+app.use("/images", express.static(path.join(__dirname, "../public/images")));
 
 // Create a connection to the database
 const db = mysql.createConnection({
