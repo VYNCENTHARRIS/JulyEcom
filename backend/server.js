@@ -13,8 +13,15 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, "../public")));
+// Log environment variables to ensure they are loaded
+console.log("DB_HOST:", process.env.DB_HOST);
+console.log("DB_USER:", process.env.DB_USER);
+console.log("DB_PASS:", process.env.DB_PASS);
+console.log("DB_NAME:", process.env.DB_NAME);
+console.log("DB_PORT:", process.env.DB_PORT);
+
+// Serve static files from the build directory at the root level
+app.use(express.static(path.join(__dirname, "../build")));
 
 // Create a connection to the database
 const db = mysql.createConnection({
